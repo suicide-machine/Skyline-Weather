@@ -1,14 +1,14 @@
 import React from "react"
-import { Button } from "@/components/ui/button"
+import Navbar from "./components/shared/Navbar"
+import { ThemeProvider } from "./components/theme/theme-provider"
 
 const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Hello world!
-      </h1>
-      <Button>Click me</Button>
-    </>
+    <ThemeProvider defaultTheme="dark">
+      <main>
+        <Navbar />
+      </main>
+    </ThemeProvider>
   )
 }
 
